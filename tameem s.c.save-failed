@@ -1,0 +1,488 @@
+//hello there
+/*amne comment lekhe*/
+/* ??? hocche na kn jani
+{
+int x, y;
+x = 1;
+x = y;
+x = 2;
+printf("%d", y);
+return 0;
+}
+*/
+
+/*//bujhlm na
+{
+    int a,b,c;
+    for(a=1;a<=3;a++){
+        for(b=1;b<=3&&b!=a;b++){
+            for(c=1;c<=3&&c!=a&&c!=b;c++){
+                printf("%d,%d,%d\n",a,b,c);
+            }
+        }
+
+    }
+}
+*/
+
+#include<stdio.h>
+int main()
+/*scanf chara a+b=sum
+{
+    int a,b,sum;
+//ekhane iccha korle variable declare korar shomyei value assign kora jaito
+//like  int a=50, b=60, sum;
+    a=50;
+    b=60;
+    sum=a+b;
+    printf("sum is %d",sum);
+    return 0;
+}
+*/
+
+/*multiple %d inside printf
+{
+    int a=50,b=60,sum=a+b;
+    printf("%d+%d=%d\n",a,b,sum);
+    return 0;
+}*/
+
+/* type cast
+{
+    int n;
+    double x;
+    x=10.5;
+    n=(int)x;
+    printf("Value of n is %d\n",n);
+    printf("Value of x is %.1f\n",x);
+    return 0;
+}
+*/
+
+/*integer value limitation
+{
+    int a;
+
+    a = 1000;
+    printf("Value of a is %d\n", a);
+
+    a = -21000;
+    printf("Value of a is %d\n", a);
+
+    a = 10000000;
+    printf("Value of a is %d\n", a);
+
+    a = -10000000;
+    printf("Value of a is %d\n", a);
+
+    a = 100020004000503;
+    printf("Value of a is %d\n", a);
+
+    a = -4325987632;
+    printf("Value of a is %d\n", a);
+
+    return 0;
+}
+*/
+
+/*double data type
+//18 page
+
+{
+    double a=9.5,b=8.743,sum=a+b;
+    printf("sum is: %lf\n",sum);
+    printf("sum is: %.2f\n",sum);
+    return 0;
+}
+*/
+
+/*scanf
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("Summission is %d",a+b);
+    return 0;
+}
+*/
+
+/*char data type
+{
+    char ch;
+    //directly kono charecter char type variable a rakhte gele just char x=T lekhle hbe na. char x='T'  likhte hbe.
+    printf("Enter a letter: \n");
+    //scanf("%c",&ch);
+    //scanf er bodole charecter type er jonno  getcha  use kora jay, same kaj
+    ch=getchar();
+    printf("the letter was:- %c", ch);
+    return 0;
+}
+*/
+
+/*//scanf + - * /
+{
+    double num1, num2;
+    char sign;
+
+    printf("insert a number = ");
+    scanf("%lf",&num1);
+
+    printf("insert a number = ");
+    scanf("%lf",&num2);
+
+    double add=num1+num2;
+    double sub=num1-num2;
+    double mult=num1*num2;
+    double div=num1/num2;
+
+    sign='+';
+    printf("\n%.4f %c %.4f  = %.4f\n",num1,sign,num2,add);
+    sign='-';
+    printf("%.4f %c %.4f = %.4f\n",num1,sign,num2,sub);
+    sign='*';
+    printf("%.4f %c %.4f = %.4f\n",num1,sign,num2,mult);
+    sign='/';
+    printf("%.4f %c %.4f = %.4f\n",num1,sign,num2,div);
+
+    return 0;
+
+}
+*/
+
+/*//nested if
+{
+    double n;
+    printf("Insert a number: \n");
+    scanf("&lf",n);
+
+    if(n>0){
+        printf("The number is positive\n");
+    }  //if akao use kora jay, else mandatory na.
+    else if(n<0){
+        printf("The number is negative\n");
+    }
+    //else if ta na dileo hoto, cause choto o na boro o na, so 0 e hobe. tai last a "else if" er bodole "else" dileo hoto.
+    else if(n==0){ // ??? ekhane 0.0000 boshale positive nicche
+        printf("The number is 0\n");
+    }
+
+    //jodi nested if else thake, suppose 4 ta, er mddhe 1 false, 2 true, tahole 2 er output pawa jabe. 3 4 check e korbe na prog.
+    return 0;
+}
+*/
+
+/*//vagshesh
+{
+    int a,b;
+    scanf("%d",&a);
+    b=a%2;
+    if(b==0){
+        printf("your number is an even number");
+    }
+    else{
+        printf("your number is an odd number");
+    }
+}
+*/
+
+/*//vagshesh 2.0
+{
+    int a,b;
+    scanf("%d",&a);
+    if(a%2==0){
+        printf("your number is an even number");
+    }
+    else{
+        printf("your number is an odd number");
+    }
+}
+*/
+//31page red mark
+/*if else &&
+{
+    char ch=getchar();
+    if(ch>='A'&&ch<='Z'){
+        printf("The letter is capital");
+    }
+    else if(ch>='a'&&ch<='z'){
+        printf("That is a small letter");
+    }
+*/
+
+/* if else ||
+{   // || thakle or ager ba porer jekono akta short puron holei if true hobe.
+    double a,b,c;
+    scanf("%lf",&a);
+    if(a>0||a<0){
+        printf("The number is not 0");
+    }
+    else{
+        printf("The number is 0");
+    }
+}
+*/
+
+/* nested ||
+{
+    char ch;
+    ch=getchar();
+    //  = value assign korte. == value check korte(milaye dekhe)
+    if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+        printf("It's  a vowel");
+    }
+    else{
+        printf("It's  a consonant");
+    }
+}
+*/
+/*//break
+{
+    double n=1;
+    while(n<=100){
+        printf("%.0f\n",n*n);
+        n++;
+        if (n==10){
+            break;
+        }
+    }
+}
+*/
+
+/* continue
+{//continue mane oita skip kore porer logic test korbe & execute korbe, continue er ta execute korbe na.
+    int n=0;// ??? while er mddhe || die n>10 dite partesi na kn?
+    while(n<20){
+        n++;
+        if(n%2==0){
+        //etar mane jodi vagfol 0 hoy, tahole oita execute koiro na
+            continue;
+        }
+        printf("%d\n",n);
+    }
+    return 0;
+}
+*/
+
+/*namota-while
+{
+    int mul=1,num;
+    scanf("%d",&num);
+    while(mul<=10){
+        printf("%d x %d = %d\n",num,mul,num*mul);
+        mul++;
+    }
+}
+*/
+
+/*//namota-for
+{
+    int num,mul;
+    scanf("%d",&num);
+//for er vitorei mul=1 die na die baire die ditam, tahole hoto for(;mul<=10;mul=mul+1)
+    for(mul=1;mul<=10;mul=mul+1){
+        printf("%d x %d = %d\n",num,mul,mul*num);
+    }
+
+}
+*/
+
+/*calculator-me
+{
+    char symbol;
+    double a,b,c,d;
+    scanf("%lf%c%lf",&a,&symbol,&b);
+
+    if(symbol=='+'){
+        printf("=%.3f",a+b);
+    }
+    else if(symbol=='-'){
+        printf("=%.3f",a-b);
+    }
+    else if(symbol=='*'){
+        printf("=%.3f",a*b);
+    }
+    else if(symbol=='/'){
+        printf("=%.3f",a/b);
+    }
+
+
+}
+*/
+
+/*//namota without *
+{
+    int n,mul,ans=0;
+    scanf("%d",&n);
+    for(mul=1;mul<=10;mul++){
+        ans=n+ans;
+        printf("%d x %d = %d\n",n,mul,ans);
+    }
+}
+*/
+
+/*//namota-nested for
+{
+    int num,mul;
+    for(num=1;num<=200;num++){
+        for(mul=1;mul<=10;mul++){
+            printf("%d x %d = %d\n",num,mul,num*mul);
+            if(mul==10){
+                printf("\n");
+            }
+        }
+    }
+}
+*/
+
+/*//namora-nested for-no *
+{
+    int num,mul,ans=0;
+    for(num=1;num<=5;num++){
+        for(mul=1;mul<=10;mul++){
+                ans=ans+num;
+                printf("%d x %d = %d\n",num,mul,ans);
+                if(mul==10){
+                    printf("\n");
+                    ans=0;
+            }
+        }
+    }
+}
+*/
+
+//jani na ki, permutation mone hoy
+
+/*//permutation basic rule
+  //complicated laglo kn jni
+{
+    int a,b,c;
+    for(a=1;a<=3;a++){
+        for(b=1;b<=3;b++){
+            if(b!=a){
+                for(c=1;c<=3;c++){
+                    if(c!=a&&c!=b){
+                        printf("%d,%d,%d\n",a,b,c);
+                    }
+                }
+            }
+        }
+    }
+}
+*/
+
+/*//permutation alternative
+{
+    int a,b,c;
+    for(a=1;a<=3;a++){
+        for(b=1;b<=3;b++){
+            for(c=1;c<=3;c++){
+                if(a!=b&&b!=c&&c!=a){
+                    printf("%d,%d,%d\n",a,b,c);
+                }
+            }
+        }
+    }
+}
+*/
+
+/*//p.s. x+y scan, x-y scan. x,y value out
+{
+    double x,y,add,sub;
+    printf("X+Y=");
+    scanf("%lf",&add);
+    printf("X-Y=");
+    scanf("%lf",&sub);
+    x=(sub+add)/2;
+    y=(add-sub)/2;
+    printf("x = %.2f\ny = %.2f",x,y);
+}
+*/
+
+/*// 2 simul equation x y value out
+{//math er shutro vul kortesilam, but process exact thik silo,
+    double a1,b1,c1,a2,b2,c2;
+
+    printf("Enter the constants of 1st eq following this syntax: a1x+b1y=c1\n");
+    scanf("%lf %lf %lf",&a1,&b1,&c1);
+    printf("Enter the constants of 2nd eq following this syntax: a2x+b2y=c2\n");
+    scanf("%lf %lf %lf",&a2,&b2,&c2);
+// ??? ekhane dd agei jodi ber kori scanf er , tahole pore jaye value golmal hoye jacche, tai scanf er pore dd=() dite hbe, age ber korle math milbe na.
+    double dd=(a1*b2-a2*b1);
+    if (dd==0){
+// ??? dd==0.0 korte boltese kn?
+// ??? 53 page ekhane if((int)dd!=0)  dile ki difference hobe program execute korte?
+        printf("The program is unsolvable");
+    }
+    else{
+
+    double x=(b2*c1-b1*c2)/dd,
+               y=(a1*c2-a2*c1)/dd;
+
+        printf("X=%.3f \nY=%.3f",x,y);
+    }
+
+
+    return 0;
+
+
+
+}
+*/
+
+/*//simple interest,loan calc
+{
+    double loan,interest,month;
+    printf("How much load did you take?  = ");
+    scanf("%lf",&loan);
+    printf("What is the interest rate?  = ");
+    scanf("%lf",&interest);
+    printf("How long before you have to pay the loan including interest?  (in months)= ");
+    scanf("%lf",&month);
+
+    double total_pay=(loan*(month/12)*interest/100)+loan,
+           pay_per_month=total_pay/month;
+
+    printf("you'll have to pay a total of %.2f\n",total_pay);
+    printf("you'll have to pay %.2f monthly to pay off the loan in %0.0f months",pay_per_month,month);
+
+    return 0;
+}
+*/
+
+/*//distance travelled in 2t, other values are given
+{
+    double u,a,t,v,s;
+        printf("Initial velocity (m/s)= ");
+        scanf("%lf",&u);
+        printf("Constant accelaration (m/s^2)= ");
+        scanf("%lf",&a);
+        printf("time (sec)= ");
+        scanf("%lf",&t);
+        printf("Final velocity (m/s)= ");
+        scanf("%lf",&v);
+
+        printf("THe vehicle will travle %.3f meter distance in %.3f seconds.",2*v*t,2*t);
+
+}
+*/
+
+/*series addition upto x
+{
+    double a,max,sum=0;
+    printf("ENter the number upto which you want to add them all up = ");
+    scanf("%lf",&max);
+    for(a=1;a<=max;a++){
+        sum=sum+a;
+    }
+    printf("summission is %.0f",sum);
+}
+*/
+
+{
+    int b,a,max,sum=0;
+    printf("ENter the number upto which you want to add them all up = ");
+    scanf("%d",&max);
+    for(a=1;(a%2)!=0&&a<=max;a++){
+        sum=sum+a;
+    }
+    printf("summission is %d",sum);
+}
