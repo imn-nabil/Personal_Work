@@ -18,14 +18,14 @@ int main()
         {
             scanf("%d",&num);
             a[j]=num;
-            if(j>0){
+            /*if(j>0){
                 if(a[j]==a[j-1]) flag=1;
-            }
+            }*/
 
         }
 
 //selsecting the ans possibility
-        for(ans=0; ans<1000   ; ++ans)
+        for(ans=0; ans<256   ; ++ans)
         {
 //accessing all elements in arrey
 
@@ -42,7 +42,7 @@ int main()
 //if found, close loop & show ans
             if(XORsumB==0) break;
         }
-        if(flag) printf("-1\n");
+        if(ans==256) printf("-1\n");
         else printf("%d\n",ans);
     }
     return 0;
