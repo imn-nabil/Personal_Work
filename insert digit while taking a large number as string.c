@@ -12,6 +12,8 @@ int main()
 
         gets(MainNum);
 
+
+
 //finding the postiono f the digit less than ....
         for(pos=0; pos<(int)strlen(MainNum) ; ++pos)
             if(MainNum[pos]==d[0]) break;
