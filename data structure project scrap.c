@@ -2,14 +2,15 @@
 #include<stdlib.h>
 #include<string.h>
 
+static int FoundInfo;
 
 void createlist();
 void showing_list();
+int SearchData(int key);
 void count_list();
 void delete_beginning();
 void delete_mid(int a);
 void delete_last();
-int SearchData(int key);
 void insert_beginning();
 void insert_last();
 void insert_mid();
@@ -44,6 +45,7 @@ back_point:
             printf("_______________________________________________________________\n");
             printf("#ENTER   -> To create a new  list.\n");
             printf("#SHOW    -> To show the list made previously.\n");
+            printf("#SEARCH  -> To look for a specific entry in that list.\n");
             printf("#COUNT   -> To count the set/number of elements in that list.\n");
             printf("#INSERT  -> To add new items in the list.\n");
             printf("#REMOVE  -> To remove an item from  the list.\n");
@@ -75,6 +77,23 @@ back_point:
             count_list();
             showhelp();
         }
+        else if(!strcmp(inpt,"#SEARCH") || !strcmp(inpt,"#search"))
+        {
+            gap();
+
+            int find,foundout=0;
+
+            printf("Which data do you want to find?:  ");
+            scanf("%d",&find);
+            getchar();
+            foundout=SearchData(find);
+
+            if(foundout)printf("\n\n     Found\n\n");
+            if(!foundout)printf("      Not Found\n\n");
+
+            showhelp();
+        }
+
         else if(!strcmp(inpt,"#INSERT") || !strcmp(inpt,"#insert"))
         {
             gap();
@@ -220,6 +239,22 @@ void createlist()
     printf("\n\n----Data entry done!----\n\n");
 }
 
+int SearchData(int key)
+{
+    struct node* current;
+    current=head;
+    FoundInfo=0;
+
+    while(current!=NULL)
+    {
+        if(key==current->id)
+            FoundInfo=current->id;
+
+        current=current->next;
+    }
+    return FoundInfo;
+}
+
 void showing_list()
 {
     struct node *current_node;
@@ -338,23 +373,6 @@ void delete_last()
     previous_node->next=NULL;
 }
 
-int SearchData(int key)
-{
-    struct node* current;
-    current=head;
-    int FoundInfo=0;
-
-    while(current!=NULL)
-    {
-        if(key==current->id)
-            FoundInfo=current->id;
-
-        current=current->next;
-    }
-    if(FoundInfo) printf("Found\n");
-    if(!FoundInfo) printf("Not Found\n");
-}
-
 void showhelp()
 {
     printf("\ntype #HELP  if needed.\n");
@@ -383,3 +401,4 @@ void show_invalid()
     printf("_____________________________________________________________________________________\n\n");
 
 }
+
